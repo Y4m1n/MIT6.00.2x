@@ -12,10 +12,10 @@ class Food(object):
     def density(self):
         return self.getValue()/self.getCost()
     def __str__(self):
-        return self.name+"/"+self.value+'/'+self.calories
+        return str(self.name)+"/"+str(self.value)+'/'+str(self.calories)
 
 #build menu of foods
-def builMenu(names,values,calories):
+def buildMenu(names,values,calories):
     '''names, values, calories lists of same length.
         name a list of strings
         returns list of foods'''
@@ -46,7 +46,7 @@ def testGreedy(items,constraint,keyFunction):
     taken,val=greedy(items,constraint,keyFunction)
     print('Total value of items taken:',val)
     for item in taken:
-        print('',taken)
+        print('',item)
 
 def testGreedys(foods, maxUnits):
     print('Use greedy by value to allocate', maxUnits,
